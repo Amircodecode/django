@@ -5,9 +5,12 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse('hello world')
 
+def room(request):
+    return HttpResponse('room')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home)
+    path('', home),
+    path('room/', room)
 ]
 
